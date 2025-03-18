@@ -5,7 +5,7 @@ const ProfileBio = () => {
       <div className="h-[250px] w-[250px] overflow-hidden rounded-full">
         <img
           className="rounded-full"
-          src="images/1681908246814.jpeg"
+          src="src/assets/images/1681908246814.jpeg"
           alt="Bio image"
         />
       </div>

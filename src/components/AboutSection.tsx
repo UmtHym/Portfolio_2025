@@ -1,6 +1,8 @@
 function AboutSection() {
   return (
-    <div>AboutSection</div>
+    <div>AboutSection
+      
+    </div>
   )
 }
-export default AboutSection
+export default AboutSection;
