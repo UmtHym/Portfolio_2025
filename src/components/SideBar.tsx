@@ -16,10 +16,10 @@ const SideBar = ({ isOpen, setIsOpen }: SideBarProps) => {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="flex"
+        className="flex w-[350px] sm:max-w-[350px]"
         onInteractOutside={(event) => event.preventDefault()}
       >
-        <section className="flex h-full w-[450px] flex-col place-items-center gap-4 p-4 lg:shadow-xl relative">
+        <section className="flex h-full w-full] flex-col place-items-center gap-4 p-4 relative">
           {/* ProfileBio only shows in desktop */}
           <div className="hidden lg:block">
             <div>

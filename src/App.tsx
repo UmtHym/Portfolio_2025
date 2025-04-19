@@ -44,7 +44,7 @@ const App = ({}: AppProps) => {
         <SideBar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
         <div
           className={`flex-1 transition-all duration-300 ${
-            isSidebarOpen ? "ml-[450px]" : "ml-0"
+            isSidebarOpen ? "ml-[350px]" : "ml-0"
           }`}
         >
           <MainContent />
