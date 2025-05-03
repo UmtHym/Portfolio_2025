@@ -42,6 +42,11 @@ const SideBar = ({ isOpen, setIsOpen }: SideBarProps) => {
               <i className="bi bi-envelope-at-fill"></i>
             </a>
           </div>
+          {/* Location */}
+          <div className="flex items-center gap-2 text-muted-foreground text-sm">
+            <i className="bi bi-geo-alt"></i>
+            <span>Barcelona, Spain</span>
+          </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="absolute -right-2 top-3"

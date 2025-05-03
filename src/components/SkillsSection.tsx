@@ -1,5 +1,3 @@
-import React from "react";
-
 import html5Icon from "../assets/images/icons/html5.png";
 import cssIcon from "../assets/images/icons/css3.png";
 import javascriptIcon from "../assets/images/icons/javascript.png";

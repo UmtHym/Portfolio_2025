@@ -1,0 +1,48 @@
+[
+  {
+    "id": "event-tracker",
+    "title": "EventTracker",
+    "description": "Location-based event discovery platform with interactive map interface, custom clustering, and real-time filtering using Mapbox GL JS.",
+    "mediaType": "none",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Mapbox",
+      "Shadcn/ui",
+      "Recharts"
+    ],
+    "demoLink": "https://event-tracker-demo.vercel.app",
+    "githubLink": "https://github.com/UmtHym/event-tracker",
+    "details": "EventTracker is a comprehensive platform for discovering and managing events based on location. \n\nKey Features:\n• Interactive map with custom clustering algorithm\n• Real-time filtering by date, category, and distance\n• Geospatial querying for efficient location-based searches\n• Comprehensive event management system\n• Admin dashboard with real-time analytics\n\nThis project showcases my ability to work with complex mapping libraries while maintaining a clean, intuitive user interface. The backend implements efficient geospatial queries to handle thousands of events without performance degradation.",
+    "featured": true
+  },
+  {
+    "id": "mysql-viewer",
+    "title": "MySQL Table Viewer",
+    "description": "Full-stack database visualization tool built with React (Vite), Node.js, and MySQL for real-time database visualization.",
+    "mediaType": "none",
+    "technologies": [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Tailwind CSS"
+    ],
+    "demoLink": "https://mysql-viewer.netlify.app",
+    "githubLink": "https://github.com/UmtHym/mysql-table-viewer",
+    "details": "MySQL Table Viewer is a comprehensive database visualization tool that makes it easy to understand complex database structures.\n\nKey Features:\n• Intuitive interface for visualizing database tables and relationships\n• Support for one-to-many and many-to-many relationships\n• Real-time updates when database structure changes\n• Split-view layout for simultaneous viewing of data and structure\n• Custom RESTful API endpoints for efficient data retrieval\n\nThis project demonstrates my backend skills with Node.js/Express and database management with MySQL, while also showcasing my ability to create clean, intuitive interfaces for complex data visualization.",
+    "featured": true
+  },
+  {
+    "id": "casa-link",
+    "title": "CasaLink",
+    "description": "Real estate marketplace application built with React and Firebase V9, enabling users to list and search properties through an interactive platform.",
+    "mediaType": "none",
+    "technologies": ["React", "Firebase V9", "Leaflet.js", "Google OAuth"],
+    "demoLink": "https://casalink.netlify.app",
+    "githubLink": "https://github.com/UmtHym/casa-link",
+    "details": "CasaLink is a full-featured real estate marketplace that connects property owners with potential buyers and renters.\n\nKey Features:\n• User authentication system with Google OAuth\n• Interactive property listings with geolocation services\n• Real-time listing updates and image upload functionality\n• Advanced property search with multiple filters\n• Secure messaging system between users\n\nThis project showcases my ability to build a complete marketplace application with user authentication, real-time updates, and location-based features using Firebase and React.",
+    "featured": true
+  }
+]

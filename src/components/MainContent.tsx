@@ -14,47 +14,71 @@ const MainContent = ({}: MainContentProps) => {
   const [activeTab, setActiveTab] = useState<TabType>("about");
 
   return (
-    <div className="h-full w-full overflow-hidden">
-      <header className="relative flex w-[100%] overflow-hidden p-2 lg:h-[80px] min-h-[80px]">
+    <div className="h-full w-full overflow-hidden flex flex-col">
+      <header className="relative flex w-full items-center justify-center overflow-hidden px-4 py-6 lg:h-[80px]">
         {/* Tabs */}
-        <div className="absolute left-1/2 top-4 flex h-[60px] -translate-x-1/2 gap-4 overflow-x-auto rounded-md border-2 border-primary p-1 px-4 md:w-fit">
-          <button
-            className={`tab-btn ${activeTab === "about" ? "tab-active" : ""}`}
+        <nav
+          className="relative flex h-[60px] gap-1 md:gap-2 overflow-x-auto rounded-xl border-2 border-primary/30 bg-background p-1.5 px-2 md:px-4 shadow-md"
+          style={{ backdropFilter: "blur(8px)" }}
+        >
+          <TabButton
+            label="About"
+            isActive={activeTab === "about"}
             onClick={() => setActiveTab("about")}
-          >
-            About
-          </button>
-          <button
-            className={`tab-btn ${activeTab === "skills" ? "tab-active" : ""}`}
+          />
+          <TabButton
+            label="Skills"
+            isActive={activeTab === "skills"}
             onClick={() => setActiveTab("skills")}
-          >
-            Skills
-          </button>
-          <button
-            className={`tab-btn ${activeTab === "work" ? "tab-active" : ""}`}
+          />
+          <TabButton
+            label="Work"
+            isActive={activeTab === "work"}
             onClick={() => setActiveTab("work")}
-          >
-            Work
-          </button>
-          <button
-            className={`tab-btn ${activeTab === "contact" ? "tab-active" : ""}`}
+          />
+          <TabButton
+            label="Contact"
+            isActive={activeTab === "contact"}
             onClick={() => setActiveTab("contact")}
-          >
-            Contact
-          </button>
-        </div>
+          />
+        </nav>
 
         {/* Theme controls - we can handle this later */}
       </header>
 
       {/* Tab content */}
-      <div>
+      <div className="flex-1 overflow-auto">
         {activeTab === "about" && <AboutSection />}
         {activeTab === "skills" && <SkillsSection />}
         {activeTab === "work" && <WorkSection />}
         {activeTab === "contact" && <ContactSection />}
       </div>
     </div>
+  );
+};
+
+// TabButton component for cleaner code
+interface TabButtonProps {
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+const TabButton = ({ label, isActive, onClick }: TabButtonProps) => {
+  return (
+    <button
+      className={`relative flex min-w-[80px] items-center justify-center whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-300 md:min-w-[100px] md:px-5 ${
+        isActive
+          ? "bg-primary text-primary-foreground shadow-sm"
+          : "text-foreground hover:bg-primary/10"
+      }`}
+      onClick={onClick}
+    >
+      {label}
+      {isActive && (
+        <span className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-primary-foreground"></span>
+      )}
+    </button>
   );
 };
 
