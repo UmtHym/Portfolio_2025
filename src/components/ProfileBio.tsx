@@ -2,7 +2,7 @@
 const ProfileBio = () => {
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="group relative h-[250px] w-[250px] overflow-hidden rounded-full border-4 border-primary/80 shadow-lg transition-all hover:border-primary">
+      <div className="group relative h-[250px] w-[250px] overflow-hidden rounded-full border-2 border-primary/80 shadow-lg transition-all hover:border-primary">
         <img
           className="h-full w-full rounded-full object-cover transition-transform duration-500 group-hover:scale-105"
           src="src/assets/images/1681908246814.jpeg"

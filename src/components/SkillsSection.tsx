@@ -1,87 +1,120 @@
-import html5Icon from "../assets/images/icons/html5.png";
-import cssIcon from "../assets/images/icons/css3.png";
-import javascriptIcon from "../assets/images/icons/javascript.png";
-import typescriptIcon from "../assets/images/icons/typescript.png";
-import reactIcon from "../assets/images/icons/reactjs.png";
-import nodeIcon from "../assets/images/icons/nodejs.png";
-import expressIcon from "../assets/images/icons/express.png";
-import mongodbIcon from "../assets/images/icons/mongodb.png";
-import mysqlIcon from "../assets/images/icons/mysql.png";
-import tailwindIcon from "../assets/images/icons/tailwind.png";
-import pythonIcon from "../assets/images/icons/python.png";
-import gitIcon from "../assets/images/icons/git.png";
+import { useState, useEffect } from "react";
+import skillCategoriesData from "../data/skillCategories.json";
 
-const skillCategories = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React", icon: reactIcon },
-      { name: "HTML5", icon: html5Icon },
-      { name: "CSS3", icon: cssIcon },
-      { name: "TailwindCSS", icon: tailwindIcon },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Node.js", icon: nodeIcon },
-      { name: "Express", icon: expressIcon },
-      { name: "MongoDB", icon: mongodbIcon },
-      { name: "MySQL", icon: mysqlIcon },
-    ],
-  },
-  {
-    title: "Languages",
-    skills: [
-      { name: "JavaScript", icon: javascriptIcon },
-      { name: "TypeScript", icon: typescriptIcon },
-      { name: "Python", icon: pythonIcon },
-    ],
-  },
-  {
-    title: "Tools & Other",
-    skills: [
-      { name: "Git", icon: gitIcon },
-      // Add more tools as needed with their icons
-    ],
-  },
-];
+interface SkillCardProps {
+  name: string;
+  icon: string;
+  level?: number;
+}
+
+interface Skill {
+  name: string;
+  icon: string;
+  level?: number;
+}
+
+interface Category {
+  title: string;
+  description?: string;
+  skills: Skill[];
+}
+
+const SkillCard = ({ name, icon, level }: SkillCardProps) => {
+  return (
+    <div className="bg-card rounded-lg border border-border p-4 transition-all hover:shadow-md">
+      <div className="flex items-center gap-4">
+        <div className="h-12 w-12 flex items-center justify-center bg-secondary/30 rounded-md p-2">
+          <img
+            src={icon}
+            alt={name}
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = "none";
+            }}
+          />
+        </div>
+        <div className="flex-1">
+          <h3 className="font-medium text-sm">{name}</h3>
+          {level && (
+            <div className="mt-2 h-1.5 w-full bg-secondary rounded-full overflow-hidden">
+              <div
+                className="h-full bg-primary rounded-full"
+                style={{ width: `${level}%` }}
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 function SkillsSection() {
-  return (
-    <section
-      className="tab-content relative flex h-full w-full flex-col overflow-auto py-8"
-      data-tab-name="skills"
-    >
-      <h2 className="text-2xl font-bold text-center mb-8">Technical Skills</h2>
+  const [isVisible, setIsVisible] = useState(false);
+  // Type assertion to tell TypeScript the JSON structure
+  const skillCategories: Category[] = skillCategoriesData;
 
-      <div className="flex flex-col gap-8 px-4 md:px-8 max-w-5xl mx-auto">
-        {skillCategories.map((category) => (
-          <div key={category.title} className="w-full">
-            <h3 className="text-xl font-semibold mb-4 text-primary">
-              {category.title}
-            </h3>
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex flex-col items-center justify-center h-[100px] w-[100px] md:h-[120px] md:w-[120px] rounded-lg border-2 border-primary bg-white shadow-lg hover:shadow-xl transition-shadow p-3"
-                >
-                  <div className="h-12 w-12 md:h-16 md:w-16 flex items-center justify-center">
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <span className="mt-2 text-sm text-center font-medium">
-                    {skill.name}
-                  </span>
+  // Animate in on mount
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <section className="tab-content w-full py-10">
+      <div className="max-w-4xl mx-auto px-6">
+        <div
+          className={`mb-12 opacity-0 transform translate-y-6 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : ""
+          }`}
+          style={{ transitionDelay: "100ms" }}
+        >
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-chart-1 to-chart-3 bg-clip-text text-transparent">
+              Technical Skills
+            </span>
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            As a full-stack developer, I work with various technologies to build
+            modern, responsive, and scalable web applications.
+          </p>
+        </div>
+
+        <div className="space-y-12">
+          {skillCategories.map((category, categoryIndex) => (
+            <div
+              key={category.title}
+              className={`bg-card rounded-lg border border-border p-6 shadow-sm opacity-0 transform translate-y-8 transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : ""
+              }`}
+              style={{ transitionDelay: `${200 + categoryIndex * 150}ms` }}
+            >
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/3">
+                  <h2 className="text-xl font-semibold mb-2">
+                    {category.title}
+                  </h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-chart-1 to-chart-3 rounded-full mb-4"></div>
+                  <p className="text-muted-foreground text-sm">
+                    {category.description}
+                  </p>
                 </div>
-              ))}
+                <div className="md:w-2/3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {category.skills.map((skill) => (
+                      <SkillCard
+                        key={skill.name}
+                        name={skill.name}
+                        icon={skill.icon}
+                        level={skill.level}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

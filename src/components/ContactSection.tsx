@@ -53,31 +53,21 @@ function ContactSection() {
   return (
     <section className="tab-content relative flex h-full w-full flex-col overflow-auto py-8">
       <div className="mx-auto w-full max-w-2xl px-4">
-        {/* Header with code-inspired styling */}
+        {/* Header with gradient title */}
         <div
-          className={`relative mb-12 opacity-0 transform translate-y-6 transition-all duration-700 ${
+          className={`mb-12 opacity-0 transform translate-y-6 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : ""
           }`}
           style={{ transitionDelay: "100ms" }}
         >
-          <div className="w-full rounded-lg border-l-4 border-primary bg-primary/5 p-5 font-mono shadow-lg">
-            <div className="flex items-center gap-3">
-              <Mail className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold">Get In Touch</h2>
-            </div>
-            <div className="mt-4 text-muted-foreground">
-              <span className="text-primary">const</span> contact =
-              <span className="text-foreground"> &#123;</span>
-              <div className="ml-4">
-                <span className="text-green-600">"message":</span> "Have a
-                project idea or job opportunity? I'd love to hear from you!",
-              </div>
-              <span className="text-foreground">&#125;;</span>
-            </div>
-          </div>
-
-          <div className="absolute -bottom-6 left-10 h-12 w-12 rounded-full bg-primary/20 blur-xl"></div>
-          <div className="absolute -right-6 top-10 h-12 w-12 rounded-full bg-primary/10 blur-xl"></div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-chart-2 to-chart-3 bg-clip-text text-transparent">
+              Get In Touch
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+            Have a project idea or job opportunity? I'd love to hear from you!
+          </p>
         </div>
 
         {/* Contact Form */}
@@ -102,7 +92,7 @@ function ContactSection() {
                   onChange={handleChange}
                   required
                   disabled={formState !== "idle"}
-                  className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-70"
+                  className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-chart-2 focus:outline-none focus:ring-1 focus:ring-chart-2 disabled:opacity-70"
                   placeholder="John Doe"
                 />
               </div>
@@ -120,7 +110,7 @@ function ContactSection() {
                   onChange={handleChange}
                   required
                   disabled={formState !== "idle"}
-                  className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-70"
+                  className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-chart-2 focus:outline-none focus:ring-1 focus:ring-chart-2 disabled:opacity-70"
                   placeholder="john@example.com"
                 />
               </div>
@@ -139,7 +129,7 @@ function ContactSection() {
                 onChange={handleChange}
                 required
                 disabled={formState !== "idle"}
-                className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-70"
+                className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-chart-2 focus:outline-none focus:ring-1 focus:ring-chart-2 disabled:opacity-70"
                 placeholder="Project Inquiry"
               />
             </div>
@@ -157,7 +147,7 @@ function ContactSection() {
                 required
                 disabled={formState !== "idle"}
                 rows={6}
-                className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-70"
+                className="w-full rounded-lg border border-border bg-background/30 px-4 py-2.5 focus:border-chart-2 focus:outline-none focus:ring-1 focus:ring-chart-2 disabled:opacity-70"
                 placeholder="Hi Umit, I have a project idea..."
               ></textarea>
             </div>
@@ -167,7 +157,7 @@ function ContactSection() {
               <button
                 type="submit"
                 disabled={formState !== "idle"}
-                className={`group relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-md hover:bg-primary/90 disabled:opacity-70 md:w-auto ${
+                className={`group relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-chart-2 px-6 py-3 text-primary-foreground shadow-md hover:bg-chart-2/90 disabled:opacity-70 md:w-auto ${
                   formState === "success"
                     ? "bg-green-600 hover:bg-green-700"
                     : ""

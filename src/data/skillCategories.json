@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Frontend",
+    "skills": [
+      { "name": "React", "icon": "/src/assets/images/icons/reactjs.png" },
+      { "name": "HTML5", "icon": "/src/assets/images/icons/html5.png" },
+      { "name": "CSS3", "icon": "/src/assets/images/icons/css3.png" },
+      { "name": "TailwindCSS", "icon": "/src/assets/images/icons/tailwind.png" }
+    ]
+  },
+  {
+    "title": "Backend",
+    "skills": [
+      { "name": "Node.js", "icon": "/src/assets/images/icons/nodejs.png" },
+      { "name": "Express", "icon": "/src/assets/images/icons/express.png" },
+      { "name": "MongoDB", "icon": "/src/assets/images/icons/mongodb.png" },
+      { "name": "MySQL", "icon": "/src/assets/images/icons/mysql.png" }
+    ]
+  },
+  {
+    "title": "Languages",
+    "skills": [
+      {
+        "name": "JavaScript",
+        "icon": "/src/assets/images/icons/javascript.png"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "/src/assets/images/icons/typescript.png"
+      },
+      { "name": "Python", "icon": "/src/assets/images/icons/python.png" }
+    ]
+  },
+  {
+    "title": "Tools & Other",
+    "skills": [{ "name": "Git", "icon": "/src/assets/images/icons/git.png" }]
+  }
+]
