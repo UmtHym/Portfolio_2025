@@ -18,7 +18,7 @@ const MainContent = ({}: MainContentProps) => {
       <header className="relative flex w-full items-center justify-center overflow-hidden px-4 py-6 lg:h-[80px]">
         {/* Tabs */}
         <nav
-          className="relative flex h-[60px] gap-1 md:gap-2 overflow-x-auto rounded-xl border-2 border-primary/30 bg-background p-1.5 px-2 md:px-4 shadow-md"
+          className="relative flex h-[60px] gap-1 md:gap-2 overflow-x-auto rounded-xl border-2 border-primary/40 bg-background p-1.5 px-2 md:px-4 shadow-md"
           style={{ backdropFilter: "blur(8px)" }}
         >
           <TabButton

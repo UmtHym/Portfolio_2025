@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Send, Loader2 } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 
 function ContactSection() {
   const [formData, setFormData] = useState({

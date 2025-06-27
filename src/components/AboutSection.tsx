@@ -14,7 +14,7 @@ function AboutSection() {
       <div className="mx-auto max-w-4xl px-4 md:px-8">
         {/* Main Title with gradient styling */}
         <div
-          className={`mb-12 opacity-0 transform translate-y-6 transition-all duration-700 ${
+          className={`mb-12 text-center opacity-0 transform translate-y-6 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : ""
           }`}
           style={{ transitionDelay: "100ms" }}
@@ -24,7 +24,7 @@ function AboutSection() {
               Hello, I'm Umit
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             A software developer based in Barcelona, specializing in building
             exceptional digital experiences.
           </p>
@@ -47,9 +47,9 @@ function AboutSection() {
               </h3>
             </div>
             <p className="mb-4">
-              I'm a Full-stack Software Engineer with expertise in React and
-              Node.js. My toolkit includes TypeScript, Next.js, and MongoDB for
-              building responsive and scalable web applications.
+              I'm a Full-stack developer with expertise in React and Node.js. My
+              toolkit includes TypeScript, Next.js, and MongoDB for building
+              responsive and scalable web applications.
             </p>
             <p>
               I bring a diverse international perspective to my work and

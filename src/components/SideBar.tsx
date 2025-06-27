@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import ProfileBio from "./ProfileBio";
+import LatestActivities from "./LatestActivities";
 
 interface SideBarProps {
   isOpen: boolean;
@@ -10,25 +11,27 @@ interface SideBarProps {
 const SideBar = ({ isOpen, setIsOpen }: SideBarProps) => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen} modal={false}>
-      <SheetTrigger className="absolute left-4 top-10 z-10">
+      <SheetTrigger className="fixed left-4 top-4 z-50">
         {/* Menu Button*/}
         <Menu className="h-6 w-6" />
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="flex w-[350px] sm:max-w-[350px]"
+        className="w-[350px] p-0 sm:max-w-[350px]"
+        style={{ width: "350px", maxWidth: "350px" }}
         onInteractOutside={(event) => event.preventDefault()}
       >
-        <section className="flex h-full w-full] flex-col place-items-center gap-4 p-4 relative">
+        <section className="flex h-full w-full flex-col gap-10 p-4 relative">
           {/* ProfileBio only shows in desktop */}
           <div className="hidden lg:block">
-            <div>
-              <ProfileBio />
-            </div>
+            <ProfileBio />
           </div>
-          {/* Hamburger menu positioned on right edge */}
-          <div>LATEST ACTIVITIES</div>
-          <div className="flex justify-items-center mt-auto gap-5 text-2xl">
+          {/* Latest Activities */}
+          <div className="flex-1 overflow-y-auto">
+            <LatestActivities />
+          </div>
+          {/* Social Links */}
+          <div className="flex justify-center gap-5 text-2xl mt-auto">
             <a href="https://github.com/UmtHym" className="link">
               <i className="bi bi-github"></i>
             </a>
@@ -42,14 +45,10 @@ const SideBar = ({ isOpen, setIsOpen }: SideBarProps) => {
               <i className="bi bi-envelope-at-fill"></i>
             </a>
           </div>
-          {/* Location */}
-          <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <i className="bi bi-geo-alt"></i>
-            <span>Barcelona, Spain</span>
-          </div>
+          {/* Close button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="absolute -right-2 top-3"
+            className="absolute right-4 top-4"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -58,5 +57,4 @@ const SideBar = ({ isOpen, setIsOpen }: SideBarProps) => {
     </Sheet>
   );
 };
-
 export default SideBar;

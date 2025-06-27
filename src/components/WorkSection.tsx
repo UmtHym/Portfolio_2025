@@ -1,20 +1,7 @@
 import { useState, useEffect } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import projectsData from "../data/projects.json";
-
-// Interface for project data matching your actual structure
-interface Project {
-  id: string;
-  category: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  liveUrl: string;
-  githubUrl: string;
-  mediaType?: string;
-  details?: string;
-  image?: string;
-}
+import { Project } from "../types/project";
 
 // Group projects by category
 function groupProjectsByCategory(projects: Project[]) {
@@ -101,7 +88,7 @@ function WorkSection() {
               {category.projects.map((project) => (
                 <div
                   key={project.id}
-                  className="group w-full max-w-sm rounded-xl border border-border bg-background/70 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  className="group w-full max-w-sm rounded-xl border border-primary/20 bg-background/70 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden bg-chart-3/5">

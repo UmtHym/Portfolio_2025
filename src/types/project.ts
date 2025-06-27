@@ -1,12 +1,12 @@
 export interface Project {
   id: string;
+  category: string;
   title: string;
   description: string;
-  mediaType: "image" | "video" | "none";
-  mediaSrc?: string;
   technologies: string[];
-  demoLink?: string;
-  githubLink?: string;
+  liveUrl?: string;
+  githubUrl: string;
+  mediaType?: string;
   details?: string;
-  featured: boolean;
+  image?: string;
 }
