@@ -35,7 +35,7 @@ const App = ({}: AppProps) => {
   }, []);
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-[#fff] text-black dark:bg-slate-800">
+    <div className="flex min-h-screen w-full flex-col bg-background text-foreground">
       {/* ProfileBio for mobile */}
       <div className="lg:hidden">
         <ProfileBio />

@@ -2,6 +2,9 @@ import SkillsSection from "./SkillsSection";
 import AboutSection from "./AboutSection";
 import WorkSection from "./WorkSection";
 import ContactSection from "./ContactSection";
+import { useTheme } from "./ThemeProvider";
+import { Moon, Sun } from "lucide-react";
+
 import { useState } from "react";
 
 interface MainContentProps {
@@ -12,7 +15,7 @@ type TabType = "about" | "skills" | "work" | "contact";
 
 const MainContent = ({}: MainContentProps) => {
   const [activeTab, setActiveTab] = useState<TabType>("about");
-
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="h-full w-full overflow-hidden flex flex-col">
       <header className="relative flex w-full items-center justify-center overflow-hidden px-4 py-6 lg:h-[80px]">
@@ -43,7 +46,13 @@ const MainContent = ({}: MainContentProps) => {
           />
         </nav>
 
-        {/* Theme controls - we can handle this later */}
+        {/* Theme controls */}
+        <button
+          onClick={toggleTheme}
+          className="absolute right-4 top-4 p-2 rounded-lg hover:bg-secondary transition-colors"
+        >
+          {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+        </button>
       </header>
 
       {/* Tab content */}

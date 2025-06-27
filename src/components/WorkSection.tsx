@@ -88,7 +88,7 @@ function WorkSection() {
               {category.projects.map((project) => (
                 <div
                   key={project.id}
-                  className="group w-full max-w-sm rounded-xl border border-primary/20 bg-background/70 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  className="group w-full max-w-sm rounded-xl border border-primary/20 bg-background/70 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
                 >
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden bg-chart-3/5">
@@ -148,9 +148,9 @@ function WorkSection() {
                           <ul className="text-sm space-y-1">
                             {formatDetails(project.details).map(
                               (feature, idx) => (
-                                <li key={idx} className="flex items-start">
-                                  <span className="text-chart-3 mr-2">•</span>
-                                  <span>{feature}</span>
+                                <li key={idx} className="text-left">
+                                  <span className="text-chart-3">• </span>
+                                  {feature}
                                 </li>
                               )
                             )}

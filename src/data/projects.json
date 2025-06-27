@@ -14,7 +14,7 @@
     "liveUrl": "https://event-tracker-demo.vercel.app",
     "githubUrl": "https://github.com/UmtHym/eventtracker-app",
     "image": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2hkcjVpZGE2emU3ZnV3Zzd0d21pODl1ajEycW5mOTQ3eDF5N2JvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q22uhy5t223utiYLlO/giphy.gif",
-    "details": "EventTracker is a comprehensive platform for discovering and managing events based on location. \n\nKey Features:\n• Interactive map with custom clustering algorithm\n• Real-time filtering by date, category, and distance\n• Geospatial querying for efficient location-based searches\n• Comprehensive event management system\n• Admin dashboard with real-time analytics\n\nThis project showcases my ability to work with complex mapping libraries while maintaining a clean, intuitive user interface. The backend implements efficient geospatial queries to handle thousands of events without performance degradation."
+    "details": "Key Features:\n• Interactive map with custom clustering\n• Real-time filtering by name and category\n• Geospatial querying for location-based searches\n• Admin dashboard with analytics"
   },
   {
     "id": "mysql-viewer",
@@ -31,7 +31,7 @@
       "Tailwind CSS"
     ],
     "githubUrl": "https://github.com/UmtHym/mysql-table-viewer",
-    "details": "MySQL Table Viewer is a comprehensive database visualization tool that makes it easy to understand complex database structures.\n\nKey Features:\n• Intuitive interface for visualizing database tables and relationships\n• Support for one-to-many and many-to-many relationships\n• Real-time updates when database structure changes\n• Split-view layout for simultaneous viewing of data and structure\n• Custom RESTful API endpoints for efficient data retrieval\n\nThis project demonstrates my backend skills with Node.js/Express and database management with MySQL, while also showcasing my ability to create clean, intuitive interfaces for complex data visualization."
+    "details": "Key Features:\n• Visualize tables and relationships\n• Support for one-to-many and many-to-many\n• Split-view for data and structure\n• Real-time database updates"
   },
   {
     "id": "casa-link",
@@ -42,7 +42,7 @@
     "image": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExenRpaTdpcXNnNmJlNGU0NWZvaTZqaTJxaGlhMTA0cDN3YnB3MjdudCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ppxCMgbxtfTdu13nOT/giphy.gif",
     "liveUrl": "https://casalink-gules-five.vercel.app/",
     "githubUrl": "https://github.com/UmtHym/CasaLink",
-    "details": "CasaLink is a full-featured real estate marketplace that connects property owners with potential buyers and renters.\n\nKey Features:\n• User authentication system with Google OAuth\n• Interactive property listings with geolocation services\n• Real-time listing updates and image upload functionality\n• Advanced property search with multiple filters\n• Secure messaging system between users\n\nThis project showcases my ability to build a complete marketplace application with user authentication, real-time updates, and location-based features using Firebase and React."
+    "details": "Key Features:\n• Google OAuth authentication\n• Interactive property maps\n• Real-time listing updates\n• Advanced search filters"
   },
   {
     "id": "portfolio",
