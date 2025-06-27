@@ -5,7 +5,7 @@ const ProfileBio = () => {
       <div className="group relative h-[250px] w-[250px] overflow-hidden rounded-full border-2 border-primary/80 shadow-lg transition-all hover:border-primary">
         <img
           className="h-full w-full rounded-full object-cover transition-transform duration-500 group-hover:scale-105"
-          src="src/assets/images/1681908246814.jpeg"
+          src="/images/1681908246814.jpeg"
           alt="Umit Hayim profile photo"
         />
         <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>

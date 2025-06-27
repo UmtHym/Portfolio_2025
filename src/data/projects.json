@@ -50,7 +50,7 @@
     "title": "Developer Portfolio",
     "description": "Personal portfolio website showcasing projects and skills",
     "technologies": ["React", "TypeScript", "Tailwind CSS"],
-    "image": "src/assets/images/Screenshot 2025-06-27 at 14.31.21.png",
+    "image": "/images/Screenshot 2025-06-27 at 14.31.21.png",
     "liveUrl": "https://umithayim.netlify.app",
     "githubUrl": "https://github.com/UmtHym/Portfolio_2025"
   }

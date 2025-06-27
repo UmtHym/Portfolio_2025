@@ -2,19 +2,19 @@
   {
     "title": "Frontend",
     "skills": [
-      { "name": "React", "icon": "/src/assets/images/icons/reactjs.png" },
-      { "name": "HTML5", "icon": "/src/assets/images/icons/html5.png" },
-      { "name": "CSS3", "icon": "/src/assets/images/icons/css3.png" },
-      { "name": "TailwindCSS", "icon": "/src/assets/images/icons/tailwind.png" }
+      { "name": "React", "icon": "/images/icons/reactjs.png" },
+      { "name": "HTML5", "icon": "/images/icons/html5.png" },
+      { "name": "CSS3", "icon": "/images/icons/css3.png" },
+      { "name": "TailwindCSS", "icon": "/images/icons/tailwind.png" }
     ]
   },
   {
     "title": "Backend",
     "skills": [
-      { "name": "Node.js", "icon": "/src/assets/images/icons/nodejs.png" },
-      { "name": "Express", "icon": "/src/assets/images/icons/express.png" },
-      { "name": "MongoDB", "icon": "/src/assets/images/icons/mongodb.png" },
-      { "name": "MySQL", "icon": "/src/assets/images/icons/mysql.png" }
+      { "name": "Node.js", "icon": "/images/icons/nodejs.png" },
+      { "name": "Express", "icon": "/images/icons/express.png" },
+      { "name": "MongoDB", "icon": "/images/icons/mongodb.png" },
+      { "name": "MySQL", "icon": "/images/icons/mysql.png" }
     ]
   },
   {
@@ -22,17 +22,17 @@
     "skills": [
       {
         "name": "JavaScript",
-        "icon": "/src/assets/images/icons/javascript.png"
+        "icon": "/images/icons/javascript.png"
       },
       {
         "name": "TypeScript",
-        "icon": "/src/assets/images/icons/typescript.png"
+        "icon": "/images/icons/typescript.png"
       },
-      { "name": "Python", "icon": "/src/assets/images/icons/python.png" }
+      { "name": "Python", "icon": "/images/icons/python.png" }
     ]
   },
   {
     "title": "Tools & Other",
-    "skills": [{ "name": "Git", "icon": "/src/assets/images/icons/git.png" }]
+    "skills": [{ "name": "Git", "icon": "/images/icons/git.png" }]
   }
 ]
