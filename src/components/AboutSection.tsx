@@ -172,7 +172,7 @@ function AboutSection() {
           style={{ transitionDelay: "1900ms" }}
         >
           <a
-            href="/Umit_Hayim_CV.pdf"
+            href="https://drive.google.com/file/d/1hSQzG5LGn2j7qFNAU-MqNR3ha05tRLU1/view?usp=share_link"
             download
             className="group relative flex items-center gap-3 overflow-hidden rounded-lg bg-primary px-8 py-3 text-primary-foreground shadow-lg transition-all hover:shadow-xl active:scale-95"
           >
