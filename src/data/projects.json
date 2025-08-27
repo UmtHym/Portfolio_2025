@@ -1,8 +1,8 @@
 [
   {
-    "id": "event-tracker",
+    "id": "eventmaps",
     "category": "Full-Stack Applications",
-    "title": "EventTracker",
+    "title": "EventMaps",
     "description": "Location-based event discovery platform with interactive map interface, custom clustering, and real-time filtering using Mapbox GL JS.",
     "technologies": [
       "Next.js",
@@ -11,8 +11,8 @@
       "Shadcn/ui",
       "Recharts"
     ],
-    "liveUrl": "https://event-tracker-demo.vercel.app",
-    "githubUrl": "https://github.com/UmtHym/eventtracker-app",
+    "liveUrl": "https:/eventmaps.io/",
+    "githubUrl": "#",
     "image": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2hkcjVpZGE2emU3ZnV3Zzd0d21pODl1ajEycW5mOTQ3eDF5N2JvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q22uhy5t223utiYLlO/giphy.gif",
     "details": "Key Features:\n• Interactive map with custom clustering\n• Real-time filtering by name and category\n• Geospatial querying for location-based searches\n• Admin dashboard with analytics"
   },
